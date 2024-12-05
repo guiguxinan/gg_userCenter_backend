@@ -1,9 +1,6 @@
-package com.gg.gg_usercenter_backend.model;
+package com.gg.gg_usercenter_backend.model.domain;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -85,6 +82,7 @@ public class User implements Serializable {
      * 是否删除 0 未删除 1 已删除
      */
     @TableField("isDelete")
+    @TableLogic
     private Integer isDelete;
 
     /**
@@ -93,4 +91,16 @@ public class User implements Serializable {
     @TableField("userRole")
     private Integer userRole;
 
+    /**
+     * 星球id
+     */
+    @TableField("planetId")
+    private String planetId;
+
+    public User(String userAccount, String newPassword, String planetId) {
+        this.userAccount = userAccount;
+        this.password = newPassword;
+        this.planetId = planetId;
+    }
+    public User() {}
 }

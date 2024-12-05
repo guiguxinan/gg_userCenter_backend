@@ -1,10 +1,8 @@
 package com.gg.gg_usercenter_backend.user;
 
 import com.gg.gg_usercenter_backend.mapper.UserMapper;
-import com.gg.gg_usercenter_backend.model.User;
-import jakarta.annotation.Resource;
-import org.junit.Assert;
-import org.junit.Test;
+import com.gg.gg_usercenter_backend.model.domain.User;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -17,7 +15,7 @@ import java.util.List;
  * @Version 1.0
  **/
 @SpringBootTest
-public class SampleTest {
+public class UserTest {
 
     @Autowired
     private UserMapper userMapper;

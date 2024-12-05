@@ -1,8 +1,5 @@
-package com.gg.gg_usercenter_backend.model.domain.request;
-
+package com.gg.gg_usercenter_backend.model.request;
 import lombok.Data;
-
-import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -13,7 +10,6 @@ import java.io.Serializable;
  **/
 @Data
 public class UserRegisterRequest implements Serializable {
-    @Serial
     private static final long serialVersionUID = 2904076819181468247L;
     /**
      * 账户
@@ -22,11 +18,14 @@ public class UserRegisterRequest implements Serializable {
     /**
      * 密码
      */
-    private String userPassword;
+    private String password;
     /**
      * 校验码
      */
     private String checkPassword;
 
-
+    /**
+     * 星球id
+     */
+    private String planetId;
 }
